@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+    --font:'Poppins', sans-serif;
+  }
+  * {
+     font-family:var(--font);
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+.no-mobile-screen {
+    display: none;
+}
+  @media (min-width:450px) and (max-width:1024px) {
+      body {
+          height: 100vh;
+          background-color: var(--background);
+      }
+      h1 {
+          font-weight: bold;         
+          color: white;
+          font-size: 26px;
+      }
+      h1::before {
+          content: url(./images/log-in.svg);
+      }
+      .box-container:first-child p {
+        color: var(--text-base);
+        font-weight: bold;
+        font-size: 15px;     
+    } 
+    .box-container {
+        margin: 10px;
+    }
+    .box-container:first-child{
+        margin-top: 40px;
+    }
+    .box-container img {
+        margin-bottom: 15px;
+    } 
+      /* flex box */
+     .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    /*termino flex box */
+
+    /* conteudo input */
+    .label{
+        color: var(--text-base);
+    }
+    .box-container input {
+        width: 310px;
+        height: 32px;
+        border-radius: 5px;
+        border: 1px solid var(--text-base);
+        background-color: var(--form-background);
+        color: white;
+    }
+    #email::placeholder{
+        content: url(images/mail.svg);
+        margin: auto;
+        padding: 5px 5px 5px 8px;
+        text-align: center;
+    }
+    #senha::placeholder{
+        content: url(images/lock.svg);
+        margin: auto;
+        padding: 5px 5px 5px 8px;
+        text-align: center;
+    }
+   #email:focus-within {
+       border: 2px solid var(--primary-color);
+
+   }
+   #senha:focus-within {
+    border: 1px solid var(--primary-color);
+   }
+   #lembrar {
+       display: none;
+   }
+   #lembrar + #check::before  {
+       content: " ";
+       height: 17px;
+       width: 17px;
+       background-color: var(--background);
+       border: 1px solid grey;
+       border-radius: 5px;
+       display: inline-block;
+       margin-right: 7px;
+       vertical-align: middle;
+       margin-bottom: 2px;
+       
+   }
+   #lembrar:checked + #check::before {
+       background-color: var(--primary-color);
+       content: url(./images/check.svg);
+   }
+   #check {
+       color: var(--text-base);
+       margin-right: 43px;
+       
+   }
+   #check-box{
+       font-size: 14px;
+       
+   }
+   #check-box a {
+       color: var(--primary-color);
+       
+   }
+   button {
+       padding: 10px;
+       width: 311px;
+       border-radius:6px;
+       background-color: var(--primary-color);
+       font-weight: bold;
+       font-size: 16px;
+   }
+    .box-container:last-child p, a{
+        color: var(--primary-color);
+        font-size: 13.5px;
+
+    }
+    .box-container:last-child a {
+        font-weight: bold;
+
+    }
+  }
+
+
+@media all and (min-width:1025px) and (max-width:1900px){
+    .no-mobile-screen {
+        
+      display: grid;
+       grid-template-areas: ".grid-1 .grid-2";
+       
+       justify-content: center;
+    }
+    h1 {
+        font-weight: bold;         
+        color: white;
+        font-size: 22px;
+        text-align: justify;
+    }
+  .label {
+      color: white;
+      font-weight: bold;
+  }
+ 
+    h1::before {
+        content: url(./images/log-in.svg);
+    }
+    .field-box-container:first-child p {
+      color: var(--text-base);
+      font-weight: bold;
+      font-size: 15px;     
+  } 
+    .grid-1 {
+        grid-area: grid-1;
+        background: var(--background);
+        height: 100vh;
+        width: 512px;
+        
+       
+    }
+    .cabecalho {
+        position: relative;
+        top: 20px;
+        left: 20px;
+
+    }
+    .field-container {
+        background-color: var(--form-background);
+        border: none;
+        border-radius: 5px;
+        width: 430px;
+        height: 460px;
+        margin: 40px;   
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .field-box-container {
+        margin: 15px;
+    }
+    .grid-2 {
+        grid-area: grid-2;
+        height: 100vh;
+        width: 1fr;
+    }
+    .grid-2 section {
+        height: 100vh;
+        width: 555px;
+        background-image: url("images/side-image.jpg");
+        background-position: left center;
+        background-size: cover;
+       
+        
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    /*termino flex box */
+
+    /* conteudo input */
+    .label{
+        color: var(--text-base);
+    }
+    .field-box-container input {
+        width: 310px;
+        height: 32px;
+        border-radius: 5px;
+        border: 1px solid var(--text-base);
+        background-color: var(--form-background);
+        color: white;
+    }
+    #email::placeholder{
+        content: url(images/mail.svg);
+        margin: auto;
+        padding: 5px 5px 5px 8px;
+        text-align: center;
+    }
+    #senha::placeholder{
+        content: url(images/lock.svg);
+        margin: auto;
+        padding: 5px 5px 5px 8px;
+        text-align: center;
+    }
+   #email:focus-within {
+       border: 2px solid var(--primary-color);
+
+   }
+   #senha:focus-within {
+    border: 1px solid var(--primary-color);
+   }
+   #lembrar {
+    display: none;
+}
+#lembrar + #check::before  {
+    content: " ";
+    height: 17px;
+    width: 17px;
+    background-color: var(--background);
+    border: 1px solid grey;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 7px;
+    vertical-align: middle;
+    margin-bottom: 2px;
+    
+}
+#lembrar:checked + #check::before {
+    background-color: var(--primary-color);
+    content: url(./images/check.svg);
+}
+#check {
+    color: var(--text-base);
+    margin-right: 43px;
+    
+}
+#check-box{
+    font-size: 14px;
+    
+}
+   #checked-box  {
+       color: var(--primary-color);
+       
+   }
+   button {
+       padding: 10px;
+       width: 311px;
+       border-radius:6px;
+       background-color: var(--primary-color);
+       font-weight: bold;
+       font-size: 16px;
+   }
+    .field-box-container:last-child p, a{
+        color: var(--primary-color);
+        font-size: 13.5px;
+
+    }
+    .field-box-container:last-child a {
+        font-weight: bold;
+
+    }
+
+   .mobile {
+        display: none;
+
+    }
+}
