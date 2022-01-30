@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario RocketSeat</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!--HTML PAGINA MOBILE-->
+    <div class="mobile">
+        <form action="">
+            <div class="container">
+                <div class="box-container">
+                    <img src="images/logo.svg" alt="">
+                        <h1>
+                            Faça seu login
+                        </h1>
+                        <p>
+                            Entre com suas informações de cadastro.
+                        </p>
+                </div>
+                <div class="box-container">
+                    <div class="label">
+                        <label for="email">E-mail</label>
+                    </div>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required autofocus>
+                </div>
+                <div class="box-container">
+                    <div class="label">
+                        <label for="senha">Senha</label>
+                    </div>
+                    <input type="password" name="senha" id="senha" placeholder="Digite ssua senha" required>
+                </div>
+                <div class="box-container" id="check-box">
+                    <input type="checkbox" name="lembrar" id="lembrar">
+                    <label for="lembrar" id="check">Lembre-me</label>
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+                <div class="box-container">
+                    <button>ENTRAR</button>
+                </div>
+                <div class="box-container">
+                    <p>Não tem uma conta? <a href="#">Registre-se</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+<!--HTML PAGINA NORMAL-->
+
+<div class="no-mobile-screen">
+   <div class="container-organizador"> 
+       <div class="cabecalho">
+            <img src="images/logo.svg" alt="logo">
+       </div>
+        <form action="">
+            <fieldset class="field-container">
+                <div class="flex-cont">
+                    <div class="field-box-container">
+                        <h1>
+                            Faça seu login
+                        </h1>
+                        <p>
+                            Entre com suas informações de cadastro.
+                        </p>
+                    </div>
+                    <div class="field-box-container">
+                        <div><label for="email" class="label">E-mail</label></div>
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required autofocus>
+                    </div>
+                    <div class="field-box-container">
+                        <div><label for="senha" class="label">Senha</label></div>
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="field-box-container" id="check-box">
+                        <input type="checkbox" name="lembrar" id="lembrar">
+                        <label for="lembrar" id="check">Lembre-me</label>
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+                    <div class="field-box-container">
+                        <button>ENTRAR</button>
+                    </div>
+                    <div class="field-box-container">
+                        <p>Não tem uma conta? <a href="#">Registre-se</a></p>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+   </div>
+    <div class="container-organizador">
+        <section>
+            
+        </section>
+    </div>
+</div>
+
+</body>
+
+</html>
