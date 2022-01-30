@@ -82,13 +82,14 @@
         padding: 5px 5px 5px 8px;
         text-align: center;
     }
-   #email:focus-within {
+  /* #email:focus-within {
        border: 2px solid var(--primary-color);
 
    }
    #senha:focus-within {
     border: 1px solid var(--primary-color);
    }
+   */
    #lembrar {
        display: none;
    }
@@ -143,170 +144,152 @@
 
 
 @media all and (min-width:1025px) and (max-width:1900px){
-    .no-mobile-screen {
-        
-      display: grid;
-       grid-template-areas: ".grid-1 .grid-2";
-       
-       justify-content: center;
-    }
-    h1 {
-        font-weight: bold;         
-        color: white;
-        font-size: 22px;
-        text-align: justify;
-    }
-  .label {
-      color: white;
-      font-weight: bold;
-  }
- 
-    h1::before {
-        content: url(./images/log-in.svg);
-    }
-    .field-box-container:first-child p {
-      color: var(--text-base);
-      font-weight: bold;
-      font-size: 15px;     
-  } 
-    .grid-1 {
-        grid-area: grid-1;
-        background: var(--background);
-        height: 100vh;
-        width: 512px;
-        
-       
-    }
-    .cabecalho {
-        position: relative;
-        top: 20px;
-        left: 20px;
+    .mobile {
+        display: none;
 
     }
+    .no-mobile-screen { 
+       display: block;
+       width: 100vw;
+       height: 100vh;
+       background: var(--background);
+    }
+    .container-organizador section{
+        float: right;
+        
+        background-image: url(images/side-image.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left bottom;
+        width: 50vw;
+        height: 100vh;
+    }
+    .container-organizador:first-child {
+        float: left;
+        width: 50vw;
+        height: 100vh
+    }
     .field-container {
+        width: 560px;
+        height: 500px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        top: 120px;
         background-color: var(--form-background);
         border: none;
         border-radius: 5px;
-        width: 430px;
-        height: 460px;
-        margin: 40px;   
-        margin-top: 90px;
+    }
+    .cabecalho{
+        position: relative;
+        left: 0;
+        top: 25px;
+    }
+    form {
+        display: flex;
+    }
+    .flex-cont {
         display: flex;
         flex-direction: column;
+        flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
     }
     .field-box-container {
-        margin: 15px;
+       margin-top: 28px;
     }
-    .grid-2 {
-        grid-area: grid-2;
-        height: 100vh;
-        width: 1fr;
-    }
-    .grid-2 section {
-        height: 100vh;
-        width: 555px;
-        background-image: url("images/side-image.jpg");
-        background-position: left center;
-        background-size: cover;
-       
-        
-    }
-    .container{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
- 
-    /*termino flex box */
+    .field-box-container:first-child h1 {
+        color: var(--text-title);
 
-    /* conteudo input */
-    .label{
+    }
+    .field-box-container:first-child h1::before {
+        content: url("images/log-in.svg");
+    }
+    .field-box-container:first-child p {
         color: var(--text-base);
     }
-    .field-box-container input {
-        width: 310px;
-        height: 32px;
-        border-radius: 5px;
-        border: 1px solid var(--text-base);
-        background-color: var(--form-background);
+    
+    
+    #email , #senha {
         color: white;
+        width: 340px;
+        align-self: center;
+        padding: 8px;
+        background-color: var(--form-background);
+        border: 1px solid var(--text-base);
+        border-radius: 5px;
+        margin-top: 8px;
+        
     }
     #email::placeholder{
         content: url(images/mail.svg);
-        margin: auto;
-        padding: 5px 5px 5px 8px;
-        text-align: center;
     }
     #senha::placeholder{
         content: url(images/lock.svg);
-        margin: auto;
-        padding: 5px 5px 5px 8px;
-        text-align: center;
+    } 
+
+    label {
+        color: var(--text-base);
     }
-   #email:focus-within {
-       border: 2px solid var(--primary-color);
-
-   }
-   #senha:focus-within {
-    border: 1px solid var(--primary-color);
-   }
-   #lembrar {
-    display: none;
-}
-#lembrar + #check::before  {
-    content: " ";
-    height: 17px;
-    width: 17px;
-    background-color: var(--background);
-    border: 1px solid grey;
-    border-radius: 5px;
-    display: inline-block;
-    margin-right: 7px;
-    vertical-align: middle;
-    margin-bottom: 2px;
-    
-}
-#lembrar:checked + #check::before {
-    background-color: var(--primary-color);
-    content: url(./images/check.svg);
-}
-#check {
-    color: var(--text-base);
-    margin-right: 43px;
-    
-}
-#check-box{
-    font-size: 14px;
-    
-}
-   #checked-box  {
-       color: var(--primary-color);
-       
-   }
-   button {
-       padding: 10px;
-       width: 311px;
-       border-radius:6px;
-       background-color: var(--primary-color);
-       font-weight: bold;
-       font-size: 16px;
-   }
-    .field-box-container:last-child p, a{
+    a{
         color: var(--primary-color);
-        font-size: 13.5px;
-
+    }
+  
+    p:last-child {
+        color: var(--primary-color);
+    }
+    #lembrar {
+        opacity: 0;
+        position: relative;
+        left: 20px;
+        
+    }
+    #check-box {
+        margin-right: 15px;
+    }
+    #check {
+        margin-right: 40px;
+    }
+    #lembrar + #check::before {
+        content: " ";
+        height: 18px;
+        width: 18px;
+        background-color: var(--background);
+        border: 1px solid grey;
+        border-radius: 5px;
+        display: inline-block;
+        margin-right: 7px;
+        vertical-align: middle;
+        margin-bottom: 2px;
+    }
+    #lembrar:checked + #check::before {
+        background-color: var(--primary-color);
+        content: url(./images/check.svg);
+    }
+    button {
+        padding: 15px;
+        background-color: var(--primary-color);
+        width: 340px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        color: rgba(90, 49, 49, 0.753);
+        transition:transform 0.5s ease;
+    }
+    button:hover {
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+    .field-box-container:last-child {
+        margin-top: 10px;
+        font-size: 16px;
     }
     .field-box-container:last-child a {
-        font-weight: bold;
-
+        font-size: 17px;
     }
-
-   .mobile {
-        display: none;
-
+    .field-box-container:nth-of-type(4) a,
+    .field-box-container:nth-of-type(4) #check{
+        font-size: 15px;
     }
 }
