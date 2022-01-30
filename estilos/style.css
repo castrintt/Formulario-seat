@@ -1,42 +1,48 @@
-@charset "UTF-8";
+    @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
-:root {
+    :root {
     --text-base: #afb6c2;
     --text-title: #d4ccb6;
     --background: #191816;
     --form-background: #24221f;
     --primary-color: #ffc632;
     --font:'Poppins', sans-serif;
-  }
-  * {
-     font-family:var(--font);
-      text-decoration: none;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-.no-mobile-screen {
+    }
+
+
+    * {
+        font-family:var(--font);
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .no-mobile-screen {
     display: none;
-}
-  @media (min-width:450px) and (max-width:1024px) {
-      body {
-          height: 100vh;
-          background-color: var(--background);
-      }
-      h1 {
-          font-weight: bold;         
-          color: white;
-          font-size: 26px;
-      }
-      h1::before {
-          content: url(../images/log-in.svg);
-      }
-      .box-container:first-child p {
-        color: var(--text-base);
-        font-weight: bold;
-        font-size: 15px;     
+    }
+    @media (min-width:450px) and (max-width:1024px) {
+
+
+    body {
+        height: 100vh;
+        background-color: var(--background);
+    }
+    h1 {
+        font-weight: bold;         
+        color: white;
+        font-size: 26px;
+    }
+    h1::before {
+        content: url(../images/log-in.svg);
+    }
+
+    .box-container:first-child p {
+    color: var(--text-base);
+    font-weight: bold;
+    font-size: 15px;     
     } 
     .box-container {
         margin: 10px;
@@ -47,18 +53,17 @@
     .box-container img {
         margin-bottom: 15px;
     } 
-      /* flex box */
-     .container{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        /* flex box */
+    .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     }
- 
-    /*termino flex box */
 
     /* conteudo input */
+
     .label{
         color: var(--text-base);
     }
@@ -82,55 +87,56 @@
         padding: 5px 5px 5px 8px;
         text-align: center;
     }
-  /* #email:focus-within {
-       border: 2px solid var(--primary-color);
+    /*
+    #email:focus-within {
+        border: 2px solid var(--primary-color);
 
-   }
-   #senha:focus-within {
+    }
+    #senha:focus-within {
     border: 1px solid var(--primary-color);
-   }
-   */
-   #lembrar {
-       display: none;
-   }
-   #lembrar + #check::before  {
-       content: " ";
-       height: 17px;
-       width: 17px;
-       background-color: var(--background);
-       border: 1px solid grey;
-       border-radius: 5px;
-       display: inline-block;
-       margin-right: 7px;
-       vertical-align: middle;
-       margin-bottom: 2px;
-       
-   }
-   #lembrar:checked + #check::before {
-       background-color: var(--primary-color);
-       content: url(../images/check.svg);
-   }
-   #check {
-       color: var(--text-base);
-       margin-right: 43px;
-       
-   }
-   #check-box{
-       font-size: 14px;
-       
-   }
-   #check-box a {
-       color: var(--primary-color);
-       
-   }
-   button {
-       padding: 10px;
-       width: 311px;
-       border-radius:6px;
-       background-color: var(--primary-color);
-       font-weight: bold;
-       font-size: 16px;
-   }
+    }
+    */
+    #lembrar {
+        display: none;
+    }
+    #lembrar + #check::before  {
+        content: " ";
+        height: 17px;
+        width: 17px;
+        background-color: var(--background);
+        border: 1px solid grey;
+        border-radius: 5px;
+        display: inline-block;
+        margin-right: 7px;
+        vertical-align: middle;
+        margin-bottom: 2px;
+        
+    }
+    #lembrar:checked + #check::before {
+        background-color: var(--primary-color);
+        content: url(../images/check.svg);
+    }
+    #check {
+        color: var(--text-base);
+        margin-right: 43px;
+        
+    }
+    #check-box{
+        font-size: 14px;
+        
+    }
+    #check-box a {
+        color: var(--primary-color);
+        
+    }
+    button {
+        padding: 10px;
+        width: 311px;
+        border-radius:6px;
+        background-color: var(--primary-color);
+        font-weight: bold;
+        font-size: 16px;
+    }
     .box-container:last-child p, a{
         color: var(--primary-color);
         font-size: 13.5px;
@@ -140,20 +146,25 @@
         font-weight: bold;
 
     }
-  }
+    }
+    /* no-mobile */
 
-
-@media all and (min-width:1025px) and (max-width:1900px){
+    @media all and (min-width:1025px) and (max-width:1900px){
     .mobile {
         display: none;
 
     }
+    /* disposição da tela */
+
     .no-mobile-screen { 
-       display: block;
-       width: 100vw;
-       height: 100vh;
-       background: var(--background);
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background: var(--background);
     }
+
+    /* organização dos elementos */
+
     .container-organizador section{
         float: right;
         
@@ -169,6 +180,16 @@
         width: 50vw;
         height: 100vh
     }
+    /*  "cabecalho" */
+
+    .cabecalho{
+        position: relative;
+        left:10px;
+        top: 25px;
+    }
+
+    /* FORMULARIO */
+
     .field-container {
         width: 560px;
         height: 500px;
@@ -180,11 +201,7 @@
         border: none;
         border-radius: 5px;
     }
-    .cabecalho{
-        position: relative;
-        left:10px;
-        top: 25px;
-    }
+  
     form {
         display: flex;
     }
@@ -196,7 +213,7 @@
         align-items: center;
     }
     .field-box-container {
-       margin-top: 28px;
+        margin-top: 28px;
     }
     .field-box-container:first-child h1 {
         color: var(--text-title);
@@ -208,8 +225,9 @@
     .field-box-container:first-child p {
         color: var(--text-base);
     }
-    
-    
+
+    /* input */
+
     #email , #senha {
         color: white;
         width: 340px;
@@ -234,7 +252,7 @@
     a{
         color: var(--primary-color);
     }
-  
+
     p:last-child {
         color: var(--primary-color);
     }
@@ -266,6 +284,9 @@
         background-color: var(--primary-color);
         content: url(../images/check.svg);
     }
+
+    /* botao */
+
     button {
         padding: 15px;
         background-color: var(--primary-color);
@@ -292,4 +313,4 @@
     .field-box-container:nth-of-type(4) #check{
         font-size: 15px;
     }
-}
+    }
