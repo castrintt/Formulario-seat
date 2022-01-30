@@ -31,7 +31,7 @@
           font-size: 26px;
       }
       h1::before {
-          content: url(./images/log-in.svg);
+          content: url(../images/log-in.svg);
       }
       .box-container:first-child p {
         color: var(--text-base);
@@ -71,13 +71,13 @@
         color: white;
     }
     #email::placeholder{
-        content: url(images/mail.svg);
+        content: url(../images/mail.svg);
         margin: auto;
         padding: 5px 5px 5px 8px;
         text-align: center;
     }
     #senha::placeholder{
-        content: url(images/lock.svg);
+        content: url(../images/lock.svg);
         margin: auto;
         padding: 5px 5px 5px 8px;
         text-align: center;
@@ -108,7 +108,7 @@
    }
    #lembrar:checked + #check::before {
        background-color: var(--primary-color);
-       content: url(./images/check.svg);
+       content: url(../images/check.svg);
    }
    #check {
        color: var(--text-base);
@@ -157,7 +157,7 @@
     .container-organizador section{
         float: right;
         
-        background-image: url(images/side-image.jpg);
+        background-image: url(../images/side-image.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: left bottom;
@@ -182,7 +182,7 @@
     }
     .cabecalho{
         position: relative;
-        left: 0;
+        left:10px;
         top: 25px;
     }
     form {
@@ -203,7 +203,7 @@
 
     }
     .field-box-container:first-child h1::before {
-        content: url("images/log-in.svg");
+        content: url("../images/log-in.svg");
     }
     .field-box-container:first-child p {
         color: var(--text-base);
@@ -222,10 +222,10 @@
         
     }
     #email::placeholder{
-        content: url(images/mail.svg);
+        content: url(../images/mail.svg);
     }
     #senha::placeholder{
-        content: url(images/lock.svg);
+        content: url(../images/lock.svg);
     } 
 
     label {
@@ -248,7 +248,7 @@
         margin-right: 15px;
     }
     #check {
-        margin-right: 40px;
+        margin-right: 55px;
     }
     #lembrar + #check::before {
         content: " ";
@@ -264,7 +264,7 @@
     }
     #lembrar:checked + #check::before {
         background-color: var(--primary-color);
-        content: url(./images/check.svg);
+        content: url(../images/check.svg);
     }
     button {
         padding: 15px;
